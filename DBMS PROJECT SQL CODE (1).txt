@@ -1,0 +1,485 @@
+create table player
+(
+player_id int,
+first_name varchar(20),
+last_name varchar(20),
+height float,
+weight float,
+position1 varchar(20),
+date_of_birth date,
+contract_expiry date,
+weekly_wages int,
+jersy_no int,
+country_id int,
+team_id int,
+FOREIGN KEY(country_id) REFERENCES country(country_id),
+FOREIGN KEY(team_id) REFERENCES club(team_id),
+PRIMARY KEY(player_id)
+);
+
+INSERT INTO player VALUES (1, 'Mike', 'Maignan', 188, 85, 'Goalkeeper', '1997-03-12', '2026-06-30', 125000, 1, 2, 1);
+INSERT INTO player VALUES    (2, 'Harry', 'Maguire', 194, 100, 'Defender', '1993-03-05', '2026-06-30', 225000, 5, 1, 1);
+INSERT INTO player VALUES    (3, 'Luke', 'Shaw', 185, 75, 'Defender', '1995-07-12', '2026-06-30', 175000, 23, 1, 1);
+INSERT INTO player VALUES    (4, 'Declan', 'Rice', 185, 78, 'Midfielder', '1999-01-14', '2028-06-30', 200000, 16, 1, 1);
+INSERT INTO player VALUES    (5, 'Jadon', 'Sancho', 180, 75, 'Forward', '2000-03-25', '2028-06-30', 250000, 25, 1, 1);
+INSERT INTO player VALUES    (6, 'Paul', 'Pogba', 191, 84, 'Midfielder', '1993-03-15', '2024-06-30', 350000, 6, 2, 1);
+INSERT INTO player VALUES    (7, 'Harry', 'Kane', 184, 77, 'Forward', '1987-02-14', '2024-06-30', 180000, 7, 1, 1);
+INSERT INTO player VALUES    (8, 'Mason', 'Greenwood', 181, 73, 'Forward', '2001-10-01', '2025-06-30', 100000, 11, 1, 1);
+INSERT INTO player VALUES    (9, 'Raphael', 'Varane', 191, 82, 'Defender', '1993-04-25', '2027-06-30', 200000, 19, 2, 1);
+INSERT INTO player VALUES    (10, 'Fred', 'Rodrigues', 169, 65, 'Midfielder', '1993-03-05', '2025-06-30', 120000, 17, 5, 1);
+INSERT INTO player VALUES    (11, 'Aaron', 'Wan-Bissaka', 183, 70, 'Defender', '1997-11-26', '2025-06-30', 120000, 29, 1, 1);
+INSERT INTO player VALUES    (12, 'Bruno', 'Fernandes', 179, 69, 'Midfielder', '1994-09-08', '2025-06-30', 300000, 18, 3, 1);
+INSERT INTO player VALUES    (13, 'Carlos', 'Casemiro', 184, 73, 'Midfielder', '1997-04-18', '2025-06-30', 100000, 34, 5, 1);
+INSERT INTO player VALUES    (14, 'De', 'Jong', 193, 85, 'Midfielder', '1996-12-13','2025-06-30',75000,21,4,1);
+INSERT INTO player VALUES    (15, 'Anthony', 'Martial', 181, 76, 'Forward', '1995-12-05', '2024-06-30', 150000, 9, 2, 1);
+INSERT INTO player VALUES    (16, 'Amad', 'Diallo', 183, 68, 'Forward', '2002-07-11', '2026-06-30', 80000, 19, 2, 1);
+INSERT INTO player VALUES    (17, 'Eric', 'Bailly', 187, 77, 'Defender', '1994-04-12', '2024-06-30', 100000, 3, 4, 1);
+INSERT INTO player VALUES    (18, 'Victor', 'Lindelof', 187, 81, 'Defender', '1994-07-17', '2024-06-30', 120000, 2, 1, 1);
+INSERT INTO player VALUES    (19, 'Jude', 'Bellingam', 170, 63, 'Midfielder', '1988-04-28', '2023-06-30', 100000, 8, 1, 1);
+INSERT INTO player VALUES    (20, 'Diogo', 'Dalot', 183, 72, 'Defender', '1999-03-18', '2025-06-30', 75000, 20, 3, 1);
+    --manchester united players
+INSERT INTO player VALUES    (21, 'Ederson', 'Moraes', 188, 86, 'Goalkeeper', '1993-08-17', '2025-06-30', 150000, 31, 5, 2);
+INSERT INTO player VALUES    (22, 'Ruben', 'Dias', 187, 85, 'Defender', '1997-05-14', '2026-06-30', 180000, 3, 3, 2);
+INSERT INTO player VALUES    (23, 'Aymeric', 'Laporte', 191, 85, 'Defender', '1994-05-27', '2025-06-30', 160000, 14, 3, 2);
+INSERT INTO player VALUES    (24, 'Kevin', 'De Bruyne', 181, 68, 'Midfielder', '1991-06-28', '2025-06-30', 350000, 17, 4, 2);
+INSERT INTO player VALUES    (25, 'Raheem', 'Sterling', 170, 69, 'Forward', '1994-12-08', '2023-06-30', 300000, 7, 1, 2);
+INSERT INTO player VALUES    (26, 'Ilkay', 'Gundogan', 180, 80, 'Midfielder', '1990-10-24', '2023-06-30', 180000, 8, 2, 2);
+INSERT INTO player VALUES    (27, 'Phil', 'Foden', 171, 67, 'Midfielder', '2000-05-28', '2026-06-30', 120000, 47, 1, 2);
+INSERT INTO player VALUES    (28, 'Gabriel', 'Jesus', 175, 73, 'Forward', '1997-04-03', '2023-06-30', 150000, 19, 5, 2);
+INSERT INTO player VALUES    (29, 'Fernandinho', 'Garcia', 179, 67, 'Midfielder', '1985-05-04', '2022-06-30', 120000, 25, 5, 2);
+INSERT INTO player VALUES    (30, 'John', 'Stones', 188, 70, 'Defender', '1994-05-28', '2026-06-30', 140000, 5, 1, 2);
+INSERT INTO player VALUES    (31, 'Bernardo', 'Silva', 173, 64, 'Midfielder', '1994-08-10', '2025-06-30', 170000, 20, 3, 2);
+INSERT INTO player VALUES    (32, 'Kyle', 'Walker', 183, 70, 'Defender', '1990-05-28', '2024-06-30', 180000, 2, 1, 2);
+INSERT INTO player VALUES    (33, 'Riyad', 'Mahrez', 179, 67, 'Forward', '1991-02-21', '2023-06-30', 250000, 26, 2, 2);
+INSERT INTO player VALUES    (34, 'Nathan', 'Ake', 180, 75, 'Defender', '1995-02-18', '2025-06-30', 120000, 6, 4, 2);
+INSERT INTO player VALUES    (35, 'Rodri', 'Hernandez', 191, 82, 'Midfielder', '1996-06-22', '2024-06-30', 160000, 16, 3, 2);
+INSERT INTO player VALUES    (36, 'Joao', 'Cancelo', 182, 74, 'Defender', '1994-05-27', '2025-06-30', 150000, 27, 3, 2);
+INSERT INTO player VALUES    (37, 'Ferran', 'Torres', 184, 73, 'Forward', '2000-02-29', '2025-06-30', 100000, 21, 5, 2);
+INSERT INTO player VALUES    (38, 'Manuel', 'Akanji', 185, 84, 'Defender', '1994-07-17', '2023-06-30', 110000, 22, 2, 2);
+INSERT INTO player VALUES    (39, 'Scott', 'Carson', 188, 83, 'Goalkeeper', '1985-09-03', '2023-06-30', 80000, 33, 1, 2);
+INSERT INTO player VALUES    (40, 'Erling', 'Haaland', 195, 77, 'Forward', '1998-01-07', '2026-06-30', 400000, 9, 1, 2);
+--man city players
+
+INSERT INTO player VALUES    (41, 'Alisson', 'Becker', 191, 91, 'Goalkeeper', '1992-10-02', '2026-06-30', 150000, 1, 5, 3);
+INSERT INTO player VALUES    (42, 'Trent', 'Alexander-Arnold', 175, 69, 'Defender', '1998-10-07', '2024-06-30', 100000, 66, 1, 3);
+INSERT INTO player VALUES    (43, 'Virgil', 'van Dijk', 193, 92, 'Defender', '1991-07-08', '2023-06-30', 200000, 4, 4, 3);
+INSERT INTO player VALUES    (44, 'Joe', 'Gomez', 188, 77, 'Defender', '1997-05-23', '2024-06-30', 90000, 12, 1, 3);
+INSERT INTO player VALUES    (45, 'Andrew', 'Robertson', 178, 67, 'Defender', '1994-03-11', '2026-06-30', 120000, 26, 1, 3);
+INSERT INTO player VALUES    (46, 'Fabinho', '', 188, 78, 'Midfielder', '1993-10-23', '2026-06-30', 150000, 3, 5, 3);
+INSERT INTO player VALUES    (47, 'Jordan', 'Henderson', 182, 67, 'Midfielder', '1990-06-17', '2023-06-30', 120000, 14, 1, 3);
+INSERT INTO player VALUES    (48, 'Thiago', 'Alcantara', 174, 70, 'Midfielder', '1991-04-11', '2024-06-30', 180000, 6, 3, 3);
+INSERT INTO player VALUES    (49, 'Sadio', 'Mane', 175, 69, 'Forward', '1992-04-10', '2023-06-30', 200000, 10, 2, 3);
+INSERT INTO player VALUES    (50, 'Roberto', 'Firmino', 181, 76, 'Forward', '1991-10-02', '2023-06-30', 180000, 9, 5, 3);
+INSERT INTO player VALUES    (51, 'Mohamed', 'Salah', 175, 71, 'Forward', '1992-06-15', '2023-06-30', 250000, 11, 2, 3);
+INSERT INTO player VALUES    (52, 'Divock', 'Origi', 185, 75, 'Forward', '1995-04-18', '2024-06-30', 90000, 27, 3, 3);
+INSERT INTO player VALUES    (53, 'James', 'Milner', 175, 70, 'Midfielder', '1986-01-04', '2022-06-30', 150000, 7, 1, 3);
+INSERT INTO player VALUES    (54, 'Darwin', 'Nunez', 190, 82, 'Forward', '1999-06-24', '2026-06-30', 150000, 19, 3, 3);
+INSERT INTO player VALUES    (55, 'Alex', 'Oxlade-Chamberlain', 180, 70, 'Midfielder', '1993-08-15', '2023-06-30', 120000, 15, 1, 3);
+INSERT INTO player VALUES    (56, 'Curtis', 'Jones', 180, 72, 'Midfielder', '2001-01-30', '2026-06-30', 80000, 17, 1, 3);
+INSERT INTO player VALUES    (57, 'Xherdan', 'Shaqiri', 169, 72, 'Midfielder', '1991-10-10', '2023-06-30', 100000, 23, 2, 3;,
+INSERT INTO player VALUES    (58, 'Takumi', 'Minamino', 174, 67, 'Forward', '1995-01-16', '2024-06-30', 90000, 18, 4, 3);
+INSERT INTO player VALUES    (59, 'Rhys', 'Williams', 192, 78, 'Defender', '2001-02-03', '2025-06-30', 60000, 46, 1, 3);
+INSERT INTO player VALUES    (60, 'Nat', 'Phillips', 193, 89, 'Defender', '1997-03-21', '2023-06-30', 70000, 47, 1, 3);
+--liverpool players
+
+INSERT INTO player VALUES    (61, 'Bernd', 'Leno', 190, 83, 'Goalkeeper', '1992-03-04', '2023-06-30', 120000, 1, 2, 4);
+INSERT INTO player VALUES    (62, 'Hector', 'Bellerin', 178, 74, 'Defender', '1995-03-19', '2023-06-30', 90000, 2, 3, 4);
+INSERT INTO player VALUES    (63, 'Gabriel', 'Magalhaes', 190, 78, 'Defender', '1997-12-19', '2025-06-30', 100000, 6, 5, 4);
+INSERT INTO player VALUES    (64, 'Ben', 'White', 185, 76, 'Defender', '1997-10-08', '2026-06-30', 110000, 4, 4, 4);
+INSERT INTO player VALUES    (65, 'Kieran', 'Tierney', 178, 70, 'Defender', '1997-06-05', '2024-06-30', 100000, 3, 2, 4);
+INSERT INTO player VALUES    (66, 'Thomas', 'Partey', 185, 82, 'Midfielder', '1993-06-13', '2025-06-30', 150000, 18, 2, 4);
+INSERT INTO player VALUES    (67, 'Granit', 'Xhaka', 185, 82, 'Midfielder', '1992-09-27', '2024-06-30', 120000, 34, 1, 4);
+INSERT INTO player VALUES    (68, 'Emile', 'Smith Rowe', 180, 72, 'Midfielder', '2000-07-28', '2026-06-30', 80000, 10, 1, 4);
+INSERT INTO player VALUES    (69, 'Bukayo', 'Saka', 178, 68, 'Midfielder', '2001-09-05', '2024-06-30', 90000, 7, 1, 4);
+INSERT INTO player VALUES    (70, 'Pierre-Emerick', 'Aubameyang', 187, 80, 'Forward', '1989-06-18', '2023-06-30', 200000, 14, 2, 4);
+INSERT INTO player VALUES    (71, 'Alexandre', 'Lacazette', 175, 73, 'Forward', '1991-05-28', '2022-06-30', 150000, 9, 2, 4);
+INSERT INTO player VALUES    (72, 'Nicolas', 'Pepe', 183, 73, 'Forward', '1995-05-29', '2024-06-30', 140000, 19, 1, 4);
+INSERT INTO player VALUES    (73, 'Ainsley', 'Maitland-Niles', 177, 70, 'Midfielder', '1997-08-29', '2023-06-30', 80000, 15, 1, 4);
+INSERT INTO player VALUES    (74, 'Eddie', 'Nketiah', 177, 70, 'Forward', '1999-05-30', '2024-06-30', 70000, 30, 2, 4);
+INSERT INTO player VALUES    (75, 'Emerson', 'Royal', 172, 68, 'Midfielder', '1999-04-14', '2026-06-30', 90000, 22, 5, 4);
+INSERT INTO player VALUES    (76, 'Rob', 'Holding', 190, 82, 'Defender', '1995-09-20', '2024-06-30', 80000, 16, 1, 4);
+INSERT INTO player VALUES    (77, 'Pablo', 'Marí', 193, 85, 'Defender', '1993-08-31', '2024-06-30', 90000, 22, 3, 4);
+INSERT INTO player VALUES    (78, 'Aaron', 'Ramsey', 183, 76, 'Midfielder', '1990-12-26', '2023-06-30', 120000, 8, 1, 4);
+INSERT INTO player VALUES    (79, 'Martin', 'Ødegaard', 178, 68, 'Midfielder', '1998-12-17', '2024-06-30', 110000, 11, 1, 4);
+INSERT INTO player VALUES    (80, 'Gabriel', 'Martinelli', 180, 73, 'Forward', '2001-06-18', '2024-06-30', 70000, 35, 5, 4);
+ -- arsenal players
+
+INSERT INTO player VALUES    (81, 'Edouard', 'Mendy', 197, 84, 'Goalkeeper', '1992-03-01', '2025-06-30', 120000, 16, 2, 5);
+INSERT INTO player VALUES    (82, 'Reece', 'James', 182, 84, 'Defender', '1999-12-08', '2025-06-30', 90000, 24, 1, 5);
+INSERT INTO player VALUES    (83, 'Antonio', 'Rudiger', 190, 85, 'Defender', '1993-03-03', '2023-06-30', 100000, 2, 4, 5);
+INSERT INTO player VALUES    (84, 'Thiago', 'Silva', 183, 79, 'Defender', '1984-09-22', '2023-06-30', 120000, 6, 5, 5);
+INSERT INTO player VALUES    (85, 'Ben', 'Chilwell', 178, 76, 'Defender', '1996-12-21', '2025-06-30', 110000, 21, 1, 5);
+INSERT INTO player VALUES    (86, 'NGolo', 'Kante', 168, 70, 'Midfielder', '1991-03-29', '2023-06-30', 150000, 7, 2, 5);
+INSERT INTO player VALUES    (87, 'Jorginho', '', 180, 70, 'Midfielder', '1991-12-20', '2023-06-30', 140000, 5, 3, 5);
+INSERT INTO player VALUES    (88, 'Mason', 'Mount', 178, 70, 'Midfielder', '1999-01-10', '2024-06-30', 120000, 19, 1, 5);
+INSERT INTO player VALUES    (89, 'Kai', 'Havertz', 188, 82, 'Midfielder', '1999-06-11', '2025-06-30', 160000, 29, 4, 5);
+INSERT INTO player VALUES    (90, 'Christian', 'Pulisic', 173, 69, 'Forward', '1998-09-18', '2024-06-30', 140000, 22, 1, 5);
+INSERT INTO player VALUES    (91, 'Timo', 'Werner', 180, 75, 'Forward', '1996-03-06', '2025-06-30', 160000, 11, 2, 5);
+INSERT INTO player VALUES    (92, 'Callum', 'Hudson-Odoi', 178, 70, 'Forward', '2000-11-07', '2024-06-30', 90000, 20, 1, 5);
+INSERT INTO player VALUES    (93, 'Mateo', 'Kovacic', 178, 78, 'Midfielder', '1994-05-06', '2024-06-30', 130000, 17, 3, 5);
+INSERT INTO player VALUES    (94, 'Kalidou', 'Koulibaly', 195, 89, 'Defender', '1991-06-20', '2025-06-30', 180000, 26, 2, 5);
+INSERT INTO player VALUES    (95, 'Andreas', 'Christensen', 188, 80, 'Defender', '1996-04-10', '2025-06-30', 90000, 4, 1, 5);
+INSERT INTO player VALUES    (96, 'Marcos', 'Alonso', 188, 85, 'Defender', '1990-12-28', '2023-06-30', 100000, 3, 5, 5);
+INSERT INTO player VALUES    (97, 'Trevoh', 'Chalobah', 187, 83, 'Defender', '1999-07-05', '2024-06-30', 80000, 29, 1, 5);
+INSERT INTO player VALUES    (98, 'Ethan', 'Ampadu', 185, 75, 'Midfielder', '2000-09-14', '2024-06-30', 70000, 23, 2, 5);
+INSERT INTO player VALUES    (99, 'Billy', 'Gilmour', 173, 63, 'Midfielder', '2001-06-11', '2024-06-30', 60000, 47, 1, 5);
+INSERT INTO player VALUES    (100, 'Armando', 'Broja', 192, 82, 'Forward', '2001-09-10', '2024-06-30', 60000, 31, 3, 5);
+--chelsea players
+select *from player;
+
+
+create table country(
+country_id int,
+country_name varchar(20),
+fifa_rank int,
+PRIMARY KEY(country_id)
+);
+insert into country values(1,'England',2);
+insert into country values(2,'France',1);
+insert into country values(3,'Portugal',6);
+insert into country values(4,'Netherlands',7);
+insert into country values(5,'Brazil',3);
+select* from country;
+
+create table club(
+team_id int,
+team_name varchar(20),
+league_id int,
+stadium_id int,
+FOREIGN KEY(league_id) REFERENCES league(league_id),
+FOREIGN KEY(stadium_id) REFERENCES stadium(stadium_id),
+PRIMARY KEY(team_id)
+);
+insert into club values(1,'Manchester United',1,1);
+insert into club values(2,'Manchester City',1,2);
+insert into club values(3,'Liverpool F.C.',1,3);
+insert into club values(4,'Arsenal F.C.',1,4);
+insert into club values(5,'Chelsea F.C.',1,5);
+select * from club;
+
+create table stadium(
+stadium_id int,
+avg_attendance int,
+stadium_name varchar(20),
+stadium_capacity int,
+PRIMARY KEY(stadium_id)
+);
+insert into stadium values(1,73960,'Old Trafford',74100);
+insert into stadium values(2,53400,'Etihad',50000);
+insert into stadium values(3,54000,'Anfield',51000);
+insert into stadium values(4,60704,'Emirates',60000);
+insert into stadium values(5,40341,'Stamford Bridge',39500);
+
+
+
+
+create table matching(
+match_id int,
+motm_id int,
+score1 int,
+score2 int,
+stadium_id int,
+FOREIGN KEY(stadium_id) REFERENCES stadium(stadium_id),
+PRIMARY KEY(match_id)
+);
+insert into matching values(34,12,9,0,1);
+insert into matching values(35,51,2,3,3);
+insert into matching values(36,40,3,0,5);
+insert into matching values(37,4,1,2,2);
+insert into matching values(38,79,2,2,4);
+select *from matching;
+create table league(
+league_id int,
+league_name varchar(20),
+PRIMARY KEY(league_id)
+);
+
+insert into league values(1,'Premier League');
+
+create table club_match(
+team_id int,
+match_id int,
+FOREIGN KEY(team_id) REFERENCES club(team_id),
+FOREIGN KEY(match_id) REFERENCES matching(match_id),
+primary key (team_id,match_id)
+);
+insert into club_match values(1,34);
+insert into club_match values(3,34);
+insert into club_match values(3,35);
+insert into club_match values(4,35);
+insert into club_match values(5,36);
+insert into club_match values(2,36);
+insert into club_match values(2,37);
+insert into club_match values(1,37);
+insert into club_match values(4,38);
+insert into club_match values(5,38);
+
+create table stats(
+player_id int primary key,
+goals int,
+assists int,
+motm_awards int,
+cleansheets int,
+minutes_played int,
+games_played int,
+FOREIGN KEY(player_id) REFERENCES player(player_id)
+);
+
+INSERT INTO stats VALUES    (1, 0, 3, 2, 6, 990, 11);
+INSERT INTO stats VALUES    (2, 2, 1, 0, 4, 540, 6);
+INSERT INTO stats VALUES    (3, 1, 4, 1, 3, 720, 8);
+INSERT INTO stats VALUES    (4, 3, 2, 1, 5, 900, 10);
+INSERT INTO stats VALUES    (5, 7, 3, 3, 2, 820, 10);
+INSERT INTO stats VALUES    (6, 2, 1, 0, 1, 360, 4);
+INSERT INTO stats VALUES    (7, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (8, 0, 2, 1, 2, 270, 3);
+INSERT INTO stats VALUES    (9, 4, 3, 2, 3, 810, 9);
+INSERT INTO stats VALUES    (10, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (11, 3, 1, 1, 1, 450, 5);
+INSERT INTO stats VALUES    (12, 2, 4, 3, 4, 990, 11);
+INSERT INTO stats VALUES    (13, 0, 3, 0, 2, 540, 6);
+INSERT INTO stats VALUES    (14, 1, 2, 0, 0, 360, 4);
+INSERT INTO stats VALUES    (15, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (16, 1, 0, 0, 0, 45, 1);
+INSERT INTO stats VALUES    (17, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (18, 3, 2, 1, 2, 720, 8);
+INSERT INTO stats VALUES    (19, 0, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (20, 2, 1, 0, 1, 540, 6);
+
+INSERT INTO stats VALUES    (21, 0, 1, 2, 9, 1080, 12);
+INSERT INTO stats VALUES    (22, 2, 2, 1, 1, 720, 8);
+INSERT INTO stats VALUES    (23, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (24, 3, 4, 2, 1, 900, 10);
+INSERT INTO stats VALUES    (25, 5, 4, 3, 1, 810, 9);
+INSERT INTO stats VALUES    (26, 1, 3, 1, 0, 360, 4);
+INSERT INTO stats VALUES    (27, 6, 7, 6, 2, 900, 10);
+INSERT INTO stats VALUES    (28, 2, 1, 0, 1, 540, 6);
+INSERT INTO stats VALUES    (29, 4, 1, 1, 0, 810, 9);
+INSERT INTO stats VALUES    (30, 1, 2, 0, 1, 270, 3);
+INSERT INTO stats VALUES    (31, 3, 1, 1, 2, 450, 5);
+INSERT INTO stats VALUES    (32, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (33, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (34, 2, 3, 1, 1, 720, 8);
+INSERT INTO stats VALUES    (35, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (36, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (37, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (38, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (39, 3, 2, 1, 2, 720, 8);
+INSERT INTO stats VALUES    (40, 12, 1, 4, 6, 990, 11);
+
+INSERT INTO stats VALUES    (41, 0, 2, 4, 5, 990, 11);
+INSERT INTO stats VALUES    (42, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (43, 2, 1, 0, 1, 540, 6);
+INSERT INTO stats VALUES    (44, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (45, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (46, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (47, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (48, 3, 2, 1, 2, 720, 8);
+INSERT INTO stats VALUES    (49, 7, 4, 2, 4, 810, 9);
+INSERT INTO stats VALUES    (50, 2, 1, 0, 1, 540, 6);
+INSERT INTO stats VALUES    (51, 5, 3, 2, 2, 990, 11);
+INSERT INTO stats VALUES    (52, 2, 1, 0, 0, 360, 4);
+INSERT INTO stats VALUES    (53, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (54, 0, 2, 1, 2, 270, 3);
+INSERT INTO stats VALUES    (55, 4, 3, 2, 3, 810, 9);
+INSERT INTO stats VALUES    (56, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (57, 3, 1, 1, 1, 450, 5);
+INSERT INTO stats VALUES    (58, 2, 4, 3, 4, 990, 11);
+INSERT INTO stats VALUES    (59, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (60, 1, 2, 0, 0, 360, 4);
+
+INSERT INTO stats VALUES    (61, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (62, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (63, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (64, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (65, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (66, 3, 2, 1, 2, 720, 8);
+INSERT INTO stats VALUES    (67, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (68, 2, 1, 0, 1, 540, 6);
+INSERT INTO stats VALUES    (69, 5, 3, 2, 2, 990, 11);
+INSERT INTO stats VALUES    (70, 2, 1, 0, 0, 360, 4);
+INSERT INTO stats VALUES    (71, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (72, 0, 2, 1, 2, 270, 3);
+INSERT INTO stats VALUES    (73, 4, 3, 2, 3, 810, 9);
+INSERT INTO stats VALUES    (74, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (75, 3, 1, 1, 1, 450, 5);
+INSERT INTO stats VALUES    (76, 2, 4, 3, 4, 990, 11);
+INSERT INTO stats VALUES    (77, 0, 0, 0, 0, 0, 0);
+INSERT INTO stats VALUES    (78, 1, 2, 0, 0, 360, 4);
+INSERT INTO stats VALUES    (79, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (80, 5, 5, 2, 4, 720, 8);
+
+INSERT INTO stats VALUES    (81, 1, 1, 2, 4, 810, 9);
+INSERT INTO stats VALUES    (82, 0, 1, 0, 0, 90, 1);
+INSERT INTO stats VALUES    (83, 2, 3, 1, 1, 720, 8);
+INSERT INTO stats VALUES    (84, 0, 2, 1, 3, 720, 8);
+INSERT INTO stats VALUES    (85, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (86, 2, 0, 1, 1, 540, 6);
+INSERT INTO stats VALUES    (87, 3, 0, 0, 3, 810, 9);
+INSERT INTO stats VALUES    (88, 3, 2, 1, 2, 720, 8);
+INSERT INTO stats VALUES    (89, 0, 0, 0, 2, 600, 8);
+INSERT INTO stats VALUES    (90, 2, 1, 0, 1, 540, 6);
+INSERT INTO stats VALUES    (91, 5, 3, 2, 2, 990, 11);
+INSERT INTO stats VALUES    (92, 2, 1, 0, 0, 360, 4);
+INSERT INTO stats VALUES    (93, 1, 0, 0, 0, 180, 2);
+INSERT INTO stats VALUES    (94, 0, 2, 1, 2, 270, 3);
+INSERT INTO stats VALUES    (95, 4, 3, 2, 3, 810, 9);
+INSERT INTO stats VALUES    (96, 1, 1, 0, 0, 270, 3);
+INSERT INTO stats VALUES    (97, 3, 1, 1, 1, 450, 5);
+INSERT INTO stats VALUES    (98, 2, 4, 3, 4, 990, 11);
+INSERT INTO stats VALUES    (99, 0, 0, 0, 0, 30, 1);
+INSERT INTO stats VALUES    (100, 1, 2, 0, 0, 360, 4);
+ 
+ select* from stats;
+create table match_referee(
+referee_id int,
+match_id int,
+FOREIGN KEY(referee_id) REFERENCES referee(referee_id),
+FOREIGN KEY(match_id) REFERENCES matching(match_id),
+PRIMARY KEY (referee_id,match_id)
+);
+
+insert into match_referee values(1,34);
+insert into match_referee values(2,34);
+insert into match_referee values(3,34);
+insert into match_referee values(4,35);
+insert into match_referee values(5,35);
+insert into match_referee values(6,35);
+insert into match_referee values(3,36);
+insert into match_referee values(7,36);
+insert into match_referee values(8,36);
+insert into match_referee values(2,37);
+insert into match_referee values(5,37);
+insert into match_referee values(6,37);
+insert into match_referee values(3,38);
+insert into match_referee values(4,38);
+insert into match_referee values(7,38);
+
+create table referee(
+referee_id int,
+referee_name varchar(20),
+matches_refereed int,
+PRIMARY KEY(referee_id)
+);
+
+INSERT INTO referee VALUES    (1, 'Michael Oliver', 150);
+INSERT INTO referee VALUES    (2, 'Anthony Taylor', 200);
+INSERT INTO referee VALUES    (3, 'Martin Atkinson', 180);
+INSERT INTO referee VALUES    (4, 'Mike Dean', 220);
+INSERT INTO referee VALUES    (5, 'Kevin Friend', 160);
+INSERT INTO referee VALUES    (6, 'Craig Pawson', 140);
+INSERT INTO referee VALUES    (7, 'Andre Marriner', 190);
+INSERT INTO referee VALUES    (8, 'Paul Tierney', 130);
+    
+create table points_table(
+team_id int,
+matches_played int,
+wins int,
+losses int,
+draws int,
+points int,
+FOREIGN KEY(team_id) REFERENCES club(team_id),
+PRIMARY KEY(team_id)
+);
+insert into points_table values(1,8,6,0,2,20);
+insert into points_table values(2,8,4,2,2,14);
+insert into points_table values(3,8,1,5,2,5);
+insert into points_table values(4,8,5,0,3,15);
+insert into points_table values(5,8,6,1,1,19);
+select* from points_table order by points desc;
+
+create table revenue(
+team_id int,
+net_income int,
+ticket_cost int,
+merch_sales int,
+FOREIGN KEY(team_id) REFERENCES club(team_id),
+PRIMARY KEY(team_id)
+);
+insert into revenue values(1,65300000,105,102100000);
+insert into revenue values(2,32000000,94,92100000);
+insert into revenue values(3,60102000,90,82100000);
+insert into revenue values(4,55000000,97,97020000);
+insert into revenue values(5,5000000,80,932400000);
+
+create table manager_table(
+manager_id int,
+team_id int,
+manager_name varchar(20),
+experience int,
+monthly_wages int,
+FOREIGN KEY(team_id) REFERENCES club(team_id),
+PRIMARY KEY(manager_id)
+);
+
+INSERT INTO manager_table VALUES    (1, 1, 'Erik Ten Haag', 10, 250000);
+INSERT INTO manager_table VALUES    (2, 2, 'Pep Guardiola', 15, 470000);
+INSERT INTO manager_table VALUES    (3, 3, 'Jurgen Klopp', 12, 360000);
+INSERT INTO manager_table VALUES    (4, 4, 'Mikel Arteta', 5, 140000);
+INSERT INTO manager_table VALUES    (5, 5, 'Mauricio Pochettino', 8, 205000);
+select *from manager_table;
+create table coach(
+coach_id int,
+manager_id int,
+coach_name varchar(20),
+experience int,
+FOREIGN KEY(manager_id) REFERENCES manager_table(manager_id),
+PRIMARY KEY(coach_id)
+);
+
+INSERT INTO coach VALUES    (1, 1, 'Mike Phelan', 20);
+INSERT INTO coach VALUES    (2, 1, 'Kieran McKenna', 5);
+INSERT INTO coach VALUES   (3, 2, 'Juanma Lillo', 25);
+INSERT INTO coach VALUES    (4, 2, 'Brian Kidd', 30);
+INSERT INTO coach VALUES    (5, 3, 'Pepijn Lijnders', 15);
+INSERT INTO coach VALUES    (10, 3, 'Peter Krawietz', 10);
+INSERT INTO coach VALUES    (6, 4, 'Steve Round', 10);
+INSERT INTO coach VALUES    (9, 4, 'Albert Stuivenberg', 8);
+INSERT INTO coach VALUES    (7, 5, 'Anthony Barry', 8);
+INSERT INTO coach VALUES    (22, 5, 'Eddie Newton', 12);
+select *from coach;
+
+
+--1
+select team_name,points from club c,points_table p
+ where c.team_id = p.team_id and c.team_id=(select team_id from points_table where points=(select max(points) from points_table));
+--2
+select first_name,last_name,goals from player p,stats s where p.player_id=s.player_id and 
+p.player_id= (select player_id from stats 
+where goals=(select max(goals) from stats));
+--3
+set serveroutput on;
+          create or replace trigger update_table after insert on matching for each row
+declare
+ points_change int;
+begin
+if :new.score1> :new.score2 then points_change:=3;
+elsif :new.score1= :new.score2 then points_change:=0;
+else points_change:=-3;
+end if; 
+update points_table
+set matches_played= matches_played+1,
+    wins = wins + CASE WHEN points_change = 3 THEN 1 ELSE 0 END,
+        losses = losses + CASE WHEN points_change = -3 THEN 1 ELSE 0 END,
+        draws = draws + CASE WHEN points_change = 0 THEN 1 ELSE 0 END,
+        points = points + CASE WHEN points_change = 3 THEN 3 ELSIF 0 THEN 1 ELSE 0 END,
+        where team_id= (select team_id from club_match where match_id = :new.match_id and team_id = (select team_id from club where stadium_id=:new.stadium_id));
+update points_table
+set matches_played= matches_played+1,
+    wins = wins + CASE WHEN points_change = -3 THEN 1 ELSE 0 END,
+        losses = losses + CASE WHEN points_change = 3 THEN 1 ELSE 0 END,
+        draws = draws + CASE WHEN change = 0 THEN 1 ELSE 0 END,
+        points = points + CASE WHEN points_change = -3 THEN 3 ELSIF 0 THEN 1 ELSE 0 END,
+        where team_id= (select team_id from club_match where match_id = :new.match_id and team_id not in (select team_id from club where stadium_id=:new.stadium_id));
+end;
+/
+--4
+SELECT t.team_id, t.team_name
+     FROM club t
+     JOIN points_table p ON t.team_id = p.team_id
+     WHERE p.wins IS NULL;
+--5
+SELECT s.stadium_id, s.stadium_name
+FROM stadium s, matching m WHERE s.stadium_id = m.stadium_id and m.match_id in (SELECT match_id FROM club_match WHERE team_id=&team_id);
+--6
+SELECT * FROM matching WHERE score1 = score2 ;
